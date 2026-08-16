@@ -5,13 +5,13 @@ import Auth from "./Auth/inedx";
 import Collection from "./Collection";
 import Cart from "./Cart";
 import PlaceOrder from "./PlaceOrder";
-import Order from "./Order";
+import Orders from "./Orders";
 export {
   Home,
   Auth,
   PlaceOrder,
   Products,
-  Order,
+  Orders,
   Cart,
   ProductDetails,
   Collection,
