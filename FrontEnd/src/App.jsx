@@ -16,19 +16,20 @@ export default function App() {
   return (
     <div>
       <Navbar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/products" element={<Products />} />
-        <Route exact path="/cart" element={<Cart />} />
-        <Route exact path="/orders" element={<Orders />} />
-        <Route exact path="/auth" element={<Auth />} />
-        <Route
-          exact
-          path="/product-details/:productId"
-          element={<ProductDetails />}
-        />
-        <Route exact path="/category/:catId" element={<Collection />} />
-      </Routes>
+      <main className="min-h-screen">
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route
+            path="/product-details/:productId"
+            element={<ProductDetails />}
+          />
+          <Route path="/category/:catId" element={<Collection />} />
+        </Routes>
+      </main>
       <Footer />
       <ToastContainer />
     </div>
