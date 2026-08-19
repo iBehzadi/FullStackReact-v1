@@ -8,14 +8,9 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   const location = useLocation();
-  const handleNavigation = (path) => {
-    setTimeout(() => {
-      navigate(path)
-    }, 800);
-  }
 
   (useEffect(() => {
-    const handleScroll = () => setScrolled(window.screenY > 20);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     return () => window.removeEventListener("scroll", handleScroll);
   }),
     []);
@@ -46,7 +41,7 @@ export default function Navbar() {
               <button
                 key={link.name}
                 className="group text-sm font-bold tracking-widest relative uppercase text-gray-600 hover:text-black transition-colors duration-500 cursor-pointer "
-                onClick={() => handleNavigation(link.path)}
+                onClick={() => navigate(link.path)}
               >
                 {link.name}
                 <span
