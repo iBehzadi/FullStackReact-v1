@@ -31,7 +31,7 @@ export default function Hero() {
                     strokeWidth="5"
                     strokeLinecap="round"
                   />
-                </svg> 
+                </svg>
                 Style
               </span>
             </h1>
@@ -45,22 +45,30 @@ export default function Hero() {
                 Shop Collections
                 <FaArrowRight className="text-xl transition-transform group-hover:translate-x-1" />
               </button>
-              <button>View Lookbook</button>
+              <button className="rounded-full border px-8 py-4 text-sm font-bold uppercase tracking-widest text-gray-900 transition-colors hover:bg-gray-50">
+                View Lookbook
+              </button>
             </div>
           </div>
 
           {/* right side */}
-          <div>
-            <div>
-              <div />
-              <img src={heroImg} alt="" />
-              <div>
-                <p>Happy clients</p>
-                <div>
-                  <span>48+</span>
-                  <div>
+          <div className="relative z-10">
+            <div className="relative">
+              <div className="absolute inset-0 -m-6 animate-pulse rounded-[40%_60%_70%_30%_40%_50%_60%_50%] bg-linear-to-r from-orange-100  to bg-orange-50" />
+              <img
+                className="relative z-10 w-87.5 transition-transform duration-700 hover:scale-105 lg:w-125"
+                src={heroImg}
+                alt=""
+              />
+              <div className="absolute -bottom-6 -left-6 z-20 hidden rounded-2xl bg-white/90 p-4 shadow-xl backdrop-blur-md sm:black">
+                <p className="text-sm font-black uppercase tracking-tighter text-gray-400">
+                  Happy clients
+                </p>
+                <div className="flex items-center gap-2">
+                  <span className="text-xl font-black text-gray-900">48+</span>
+                  <div className="flex -space-x-2">
                     {[1, 2, 3].map((i) => (
-                      <div />
+                      <div key={i} className="h-6 w-6 rounded-full border-2 border-white bg-gray-200" />
                     ))}
                   </div>
                 </div>
