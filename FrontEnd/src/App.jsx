@@ -1,6 +1,6 @@
 import React from "react";
 import { ToastContainer } from "react-toastify";
-import { Footer, Hero, Navbar } from "./Components";
+import { Footer, Navbar } from "./Components";
 import { Route, Routes } from "react-router-dom";
 import {
   Auth,
@@ -17,7 +17,6 @@ export default function App() {
     <div>
       <Navbar />
       <main className="min-h-screen">
-        <Hero />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />

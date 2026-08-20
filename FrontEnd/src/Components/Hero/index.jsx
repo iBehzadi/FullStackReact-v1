@@ -1,7 +1,31 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaShippingFast } from "react-icons/fa";
 import heroImg from "../../assets/woman1.png";
+import { BiSend, BiSupport } from "react-icons/bi";
+import { MdPayment } from "react-icons/md";
 export default function Hero() {
+  const features = [
+    {
+      icon: <FaShippingFast />,
+      title: "Free Shiping",
+      text: "On all orders over $100",
+    },
+    {
+      icon: <BiSend />,
+      title: "Fast Delivery",
+      text: "Wordlwide in 3-5 days",
+    },
+    {
+      icon: <BiSupport />,
+      title: "24/7 Support",
+      text: "Expert fashion adivce",
+    },
+    {
+      icon: <MdPayment />,
+      title: "Secure Payment",
+      text: "100% encrypted checkout",
+    },
+  ];
   return (
     <div className="relative min-h-screen overflow-hidden bg-white px-6">
       <div className="absolute -top-24 -right-24 w-96 rounded-full bg-orange-50/50 blur-3xl" />
@@ -54,13 +78,13 @@ export default function Hero() {
           {/* right side */}
           <div className="relative z-10">
             <div className="relative">
-              <div className="absolute inset-0 -m-6 animate-pulse rounded-[40%_60%_70%_30%_40%_50%_60%_50%] bg-linear-to-r from-orange-100  to bg-orange-50" />
+              <div className="absolute inset-0 -m-6 animate-pulse rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-linear-to-r from-orange-100  to bg-orange-50" />
               <img
                 className="relative z-10 w-87.5 transition-transform duration-700 hover:scale-105 lg:w-125"
                 src={heroImg}
                 alt=""
               />
-              <div className="absolute -bottom-6 -left-6 z-20 hidden rounded-2xl bg-white/90 p-4 shadow-xl backdrop-blur-md sm:black">
+              <div className="absolute -bottom-6 -left-6 z-20  rounded-2xl bg-white/90 p-4 shadow-xl backdrop-blur-md sm:black">
                 <p className="text-sm font-black uppercase tracking-tighter text-gray-400">
                   Happy clients
                 </p>
@@ -68,7 +92,10 @@ export default function Hero() {
                   <span className="text-xl font-black text-gray-900">48+</span>
                   <div className="flex -space-x-2">
                     {[1, 2, 3].map((i) => (
-                      <div key={i} className="h-6 w-6 rounded-full border-2 border-white bg-gray-200" />
+                      <div
+                        key={i}
+                        className="h-6 w-6 rounded-full border-2 border-white bg-gray-200"
+                      />
                     ))}
                   </div>
                 </div>
@@ -78,6 +105,17 @@ export default function Hero() {
         </div>
 
         {/* bottom content here */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-20">
+          {features.map((item, index) => (
+            <div key={index} className="group:">
+              <div>{item.icon}</div>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
