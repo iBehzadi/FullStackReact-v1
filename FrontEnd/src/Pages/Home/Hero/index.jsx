@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowRight, FaShippingFast } from "react-icons/fa";
-import heroImg from "../../assets/woman1.png";
+import heroImg from "../../../assets/woman1.png";
 import { BiSend, BiSupport } from "react-icons/bi";
 import { MdPayment } from "react-icons/md";
 export default function Hero() {
