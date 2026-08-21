@@ -107,11 +107,11 @@ export default function Hero() {
         {/* bottom content here */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-20">
           {features.map((item, index) => (
-            <div key={index} className="group:">
-              <div>{item.icon}</div>
+            <div key={index} className="group flex flex-col items-center gap-4 rounded-3xl p-8 text-center transition-all duration-300 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.5)] lg:items-start lg:text-left">
+              <div className="flex h-14 w-14 items-center justify-center  text-2xl rounded-2xl  bg-orange-600 transition-colors  text-white">{item.icon}</div>
               <div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
+                <h3 className="text-base font-bold text-gray-900">{item.title}</h3>
+                <p className="mt-1 text-sm">{item.text}</p>
               </div>
             </div>
           ))}
